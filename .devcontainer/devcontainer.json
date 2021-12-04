@@ -1,0 +1,22 @@
+{
+    "name": "linux programming",
+    "build" : {
+        "dockerfile": "Dockerfile"
+    },
+    "extensions": [
+        "ms-vscode.cpptools",
+        "streetsidesoftware.code-spell-checker",
+        "vector-of-bool.cmake-tools",
+        "streetsidesoftware.code-spell-checker"
+    ],
+    "settings": {
+        "editor.formatOnSave": true
+    },
+    "mounts": [
+        "source=${localEnv:HOME}/.ssh/,target=/root/.ssh/,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached",
+        "source=${localWorkspaceFolder}/src,target=/home/src,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.config/gcloud/,target=/root/.config/gcloud/,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.kube/,target=/root/.kube/,type=bind,consistency=cached",
+    ],
+}
